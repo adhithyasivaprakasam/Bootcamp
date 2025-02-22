@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: azure;
+            background-image: url("bg1.jpg");
+            background-size: cover;
+            
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .about, .portfolio, .contact {
+            margin: 20px 0;
+        }
+        .portfolio .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .portfolio .project {
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            text-align: left;
+            border-radius: 5px;
+        }
+        .portfolio .project img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Portfolio</h1>
+    <nav>
+        <a href="index.html">About Me</a>
+        <a href="#portfolio">My project</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hello I'm S Adhithya, a passionate web developer with experience in HTML, CSS, and JavaScript. I love learning new web technologies and building projects that solve real-world problems. I have worked on various projects including websites, web apps, and personal projects, always looking to improve my skills and learn more about the web development ecosystem. © 2025 My Portfolio. All Rights Reserved.</p>
+</section>
+<hr>
+<section id="portfolio" class="portfolio">
+    <h2>My Projects</h2>
+    <div class="projects">
+        <div class="project">
+            <img src="https://images.thefishsite.com/fish/legacy/imagelib/15_asizemay12.jpg?scale.option=fill&scale.width=1200&scale.height=630&crop.width=1200&crop.height=630&crop.y=center&crop.x=center" alt="Project 1">
+            <h3>Aquaculture Water management</h3>
+            <p>A description of what Project 1 is about.</p>
+        </div>
+        <div class="project">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_18lmE_D_thoapuV8hsACHZITtkM9EmoWlQ&s" alt="Project 2">
+            <h3>Fuel delivery App</h3>
+            <p>A description of what Project 2 is about.</p>
+        </div>
+        <div class="project">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL2ZjVRkgkBjKNvPuuHSmBa6IognR7RuqaEg&s" alt="Project 3">
+            <h3>Home renovation</h3>
+            <p>A description of what Project 3 is about.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </div>
+</section>
+<hr>
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out to me via email or social media:</p>
+    <ul>
+        <li>Email: adhithyaPrakas2005.com</li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/-adhithya-s" target="_blank">My LinkedIn</a></li>
+        <li>GitHub: <a href="https://github.com" target="_blank">My GitHub</a></li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

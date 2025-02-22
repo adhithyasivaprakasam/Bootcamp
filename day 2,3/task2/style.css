@@ -1,0 +1,12 @@
+body
+{
+    background-color:rgb(224, 246, 245);
+    text-align: center;
+    margin: 30px;
+}
+.navbar
+{
+    border: 20px;
+    margin: 20px;
+    padding: 30px;
+}
