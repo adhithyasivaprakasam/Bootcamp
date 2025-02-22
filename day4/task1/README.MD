@@ -1,0 +1,1 @@
+hide image using js
