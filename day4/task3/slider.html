@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Image Slider</title>
+  <style>
+    .slider {
+      width: 100%;
+      overflow: hidden;
+    }
+    .slider img {
+      width: 100%;
+      transition: transform 1s ease;
+    }
+  </style>
+</head>
+<body>
+
+<div class="slider">
+  <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="Image 1">
+  <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg" alt="Image 2">
+  <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="Image 3">
+</div>
+
+<script>
+  let index = 0;
+  const images = document.querySelectorAll('.slider img');
+  const totalImages = images.length;
+
+  function changeImage() {
+    images.forEach((img, i) => {
+      img.style.transform = `translateX(${-index * 300}%)`;
+    });
+    index = (index + 1) % totalImages;
+  }
+
+  setInterval(changeImage, 3000);
+</script>
+
+</body>
+</html>

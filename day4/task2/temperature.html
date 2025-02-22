@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #214f1d;
+            background: linear-gradient(rgb(105, 148, 105),rgb(119, 119, 110));
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container {
+           background: linear-gradient(rgb(223, 223, 149),rgb(172, 221, 172));
+           background: no-repeat;
+           background-attachment: fixed;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+            border-style: solid;
+            border-color: rgb(5, 44, 9);
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Temperature Converter</h2>
+    <label for="tempInput">Enter Temperature:</label>
+    <input type="number" id="tempInput" placeholder="Enter value">
+
+    <label for="unitSelect">Select Unit:</label>
+    <select id="unitSelect">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+    </select>
+
+    <button onclick="convertTemperature()">Convert</button>
+
+    <h3>Converted Temperature:</h3>
+    <p id="result"></p>
+</div>
+
+<script>
+    function convertTemperature() {
+        let tempValue = document.getElementById('tempInput').value;
+        let unit = document.getElementById('unitSelect').value;
+        let resultText = '';
+        
+        if (unit === 'celsius') {
+            // Convert from Celsius to Fahrenheit
+            let fahrenheit = (tempValue * 9/5) + 32;
+            resultText = `${tempValue}° Celsius is equal to ${fahrenheit.toFixed(2)}° Fahrenheit.`;
+        } else if (unit === 'fahrenheit') {
+            // Convert from Fahrenheit to Celsius
+            let celsius = (tempValue - 32) * 5/9;
+            resultText = `${tempValue}° Fahrenheit is equal to ${celsius.toFixed(2)}° Celsius.`;
+        }
+
+        // Display the result
+        document.getElementById('result').innerText = resultText;
+    }
+</script>
+
+</body>
+</html>

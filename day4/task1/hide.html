@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show and Hide Image</title>
+</head>
+<body>
+
+  <!-- Image element -->
+  <img id="myImage" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="Placeholder Image" style="display: none;">
+
+  <!-- Button to toggle image visibility -->
+  <button onclick="toggleImage()">Show/Hide Image</button>
+
+  <script>
+    // Function to toggle the image visibility
+    function toggleImage() {
+      const img = document.getElementById('myImage');
+      
+      // Check if the image is currently hidden
+      if (img.style.display === 'none') {
+        // If it is hidden, show it
+        img.style.display = 'block';
+      } else {
+        // If it is visible, hide it
+        img.style.display = 'none';
+      }
+    }
+  </script>
+  
+</body>
+</html>
